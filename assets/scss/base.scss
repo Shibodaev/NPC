@@ -1,0 +1,284 @@
+@import './media';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-width: 320px;
+  font-size: 10px;
+  overflow-x: hidden;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: 500;
+  transition: all .3s ease-in-out;
+  color: var(--black);
+  font-family: 'Circe', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+#__nuxt {
+  overflow: hidden;
+}
+
+main {
+  background: var(--white);
+}
+
+p {
+  margin: 0 0 1.9rem 0;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.root-container {
+  display: flex;
+  min-height: 100vh;
+  padding-top: var(--header-height);
+  flex-direction: column;
+
+  @media (max-width: $bp-tablet-s) {
+    padding-top: var(--mob-toll-bar-height);
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: $bp-laptop-s;
+  margin: 0 auto;
+  @apply pl-6 pr-6 md:pl-16;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  text-decoration: none;
+  border: none;
+  list-style-type: none;
+  transition: all .3s ease-in-out;
+  padding: 1rem 2.8rem;
+  border-radius: 50px;;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  box-sizing: border-box;
+  //@media (min-width: $bp-tablet-s) {
+  //
+  //}
+
+  &__wrap {
+    .btn--bg-blue.btn--large {
+      padding: 1.4rem 7rem;
+    }
+  }
+
+  &--bg-red {
+    background: var(--red);
+    color: var(--white)
+  }
+
+  &--bg-blue {
+    background: var(--blue);
+    color: var(--white);
+  }
+
+  &--small {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 122.4%;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+
+    @media (max-width: $bp-tablet-s) {
+      padding: 1rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  &--large {
+    font-size: 2.2rem;
+    line-height: 122.4%;
+    padding: 1.2rem 5.3rem;
+
+
+    @media (min-width: $bp-tablet) {
+      min-width: 37.5rem;
+    }
+  }
+
+
+  &--svg-assistant {
+    svg {
+      margin-right: 1rem;
+      height: 2.2rem;
+      width: 1.2rem;
+    }
+
+  }
+
+  &:hover {
+    opacity: .7;
+
+    &:after,
+    &:before {
+      opacity: 0.7;
+    }
+  }
+
+  &--arrow {
+    svg {
+      width: 1.6rem;
+      height: 0.85rem;
+      margin-left: 1.3rem;
+    }
+
+  }
+
+}
+
+
+h1,
+.title-1 {
+  font-weight: 700;
+  margin: 0;
+  font-size: 3.5rem;
+  line-height: 111.4%;
+
+  @media(max-width: $bp-tablet) {
+    font-size: 3.8rem;
+    line-height: 3.8rem;
+  }
+
+  @media(max-width: $bp-tablet-s) {
+    font-size: 2.3rem;
+    line-height: 3rem;
+    z-index: 10;
+  }
+
+  &--big {
+    font-size: 4rem;
+
+  }
+
+  &--style {
+    position: relative;
+    display: inline-block;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 6.58px;
+      height: 6.58px;
+      background: var(--red);
+      top: 50%;
+      transform: translateY(-50%) matrix(0.71, -0.64, 0.78, 0.71, 0, 0)
+    }
+
+    &:before {
+      left: -2.6rem;
+    }
+
+    &:after {
+      right: 0;
+      margin-right: -2.6rem;
+    }
+  }
+}
+
+
+h2,
+.title-2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 117.4%;
+  /* or 35px */
+
+  @media(max-width: $bp-laptop-s) {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+
+  @media(max-width: $bp-tablet-s) {
+    font-size: 1.9rem;
+    line-height: 1.9rem;
+  }
+}
+
+h3,
+.title-3 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1;
+  margin: 0;
+
+  @media(max-width: $bp-laptop-s) {
+    font-size: 2.0rem;
+    line-height: 1.5;
+  }
+
+  @media(max-width: $bp-tablet-s) {
+    font-size: 1.6rem;
+  }
+}
+
+h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 95.9%;
+}
+
+.head-mobile-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow-mobile-menu {
+  display: none;
+  width: 3.7rem;
+  height: 3.7rem;
+  border-radius: 50%;
+  background-color: var(--grayLightest);
+  align-items: center;
+  justify-content: center;
+  transform: rotate(180deg);
+
+  &.open {
+    transform: rotate(0deg);
+  }
+
+  @media(max-width: $bp-tablet-s) {
+    display: flex;
+  }
+}
+
+
+.hidden {
+  display: none !important;
+}
+
+

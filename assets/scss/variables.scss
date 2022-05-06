@@ -1,0 +1,39 @@
+//Основные переменные
+:root {
+  --black-default: #000000;
+  --black: #2B2B2B;
+  --black-dark: #2F2F2F;
+  --blue:  #3865A7;
+  --gold: #C2AB81;
+  --yellow: #FFFF04;
+  --yellowHover: #F9F900;
+
+  --grayLighter: #F1F2F2;
+  --gray: #A6A8B0;
+  --grayDark: #747680;
+  --grayLight: #E5E5E5;
+  --grayLightest: #F7F7F7;
+  --white: #FFFFFF;
+  --purple: #B18CBE;
+  --violet-t: rgba(64, 25, 65, 0.5);
+  --gold: #C2AB81;
+  --red: #FE5F5F;
+  --header-height: 8.4rem;
+
+  --head-m: 4rem;
+  --content-w: 144rem;
+
+  --aside-sidebar-w-d: 30rem;
+  --aside-gap-d: 7rem;
+  --mob-toll-bar-height: 6.6rem;
+
+  @media(max-width:1279px){
+    --aside-gap-d: 4rem;
+    --container-p: 4rem;
+  }
+
+    @media(max-width:767px){
+      --header-height: 6.2rem;
+      --container-p: 2.4rem;
+    }
+}
