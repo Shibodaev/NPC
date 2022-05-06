@@ -1,0 +1,19 @@
+[
+  {
+    "name": "icons",
+    "defaultSprite": true,
+    "symbols": [
+      "advantage-1",
+      "advantage-2",
+      "advantage-3",
+      "bg-before",
+      "bg",
+      "blockquote",
+      "logo",
+      "missile",
+      "online-assistant",
+      "phone",
+      "svgarrow"
+    ]
+  }
+]
